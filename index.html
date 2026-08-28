@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>David Storrs-Fox – Philosophy</title>
+<meta name="description" content="David Storrs-Fox is a philosopher working on agency, ability, responsibility, and artificial intelligence." />
+<meta property="og:title" content="David Storrs-Fox – Philosophy" />
+<meta property="og:description" content="Institute for Ethics in AI, University of Oxford" />
+<meta property="og:image" content="/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="David Storrs-Fox – Philosophy" />
+<meta name="twitter:description" content="Institute for Ethics in AI, University of Oxford" />
+<meta name="twitter:image" content="/og.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<script>
+  (function () {
+    try {
+      var stored = window.localStorage.getItem('theme');
+      var theme = stored === 'dark' || stored === 'light'
+        ? stored
+        : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {}
+  })();
+</script>
+<main>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="David Storrs-Fox, home">David Storrs-Fox</a>
+    <nav aria-label="Main navigation">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#conferences">Convening</a>
+      <a class="nav-cv" href="#cv">CV ↗</a>
+      <button type="button" class="theme-toggle" aria-label="Toggle dark mode" onclick="
+        var root = document.documentElement;
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { window.localStorage.setItem('theme', next); } catch (e) {}
+      ">
+        <span class="theme-toggle-icon theme-toggle-icon--light" aria-hidden="true">☀</span>
+        <span class="theme-toggle-icon theme-toggle-icon--dark" aria-hidden="true">☾</span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="sticky-bar" id="stickyBar">
+    <a class="wordmark" href="#top">David Storrs-Fox</a>
+    <nav aria-label="Sticky navigation">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#conferences">Convening</a>
+      <a class="nav-cv" href="#cv">CV ↗</a>
+      <button type="button" class="theme-toggle" aria-label="Toggle dark mode" onclick="
+        var root = document.documentElement;
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { window.localStorage.setItem('theme', next); } catch (e) {}
+      ">
+        <span class="theme-toggle-icon theme-toggle-icon--light" aria-hidden="true">☀</span>
+        <span class="theme-toggle-icon theme-toggle-icon--dark" aria-hidden="true">☾</span>
+      </button>
+    </nav>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var bar = document.getElementById('stickyBar');
+      var hero = document.querySelector('.hero');
+      if (!bar || !hero) return;
+      var threshold = 0;
+      function updateThreshold() {
+        threshold = hero.getBoundingClientRect().height + hero.offsetTop - 80;
+      }
+      function onScroll() {
+        if (window.scrollY > threshold) {
+          bar.classList.add('is-visible');
+        } else {
+          bar.classList.remove('is-visible');
+        }
+      }
+      updateThreshold();
+      window.addEventListener('resize', updateThreshold);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    });
+  </script>
+
+  <section class="hero" id="top">
+    <div class="hero-art" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <p class="bio-line">
+        I am an Early Career Research Fellow at the University of Oxford's <a href="https://www.oxford-aiethics.ox.ac.uk/" target="_blank" rel="noopener noreferrer">Institute for Ethics in AI</a>, and a Junior Research Fellow in Philosophy at Jesus College, Oxford. I am also a Research Associate at the <a href="https://www.tuhh.de/ethics/welcome" target="_blank" rel="noopener noreferrer">Institute for Ethics in Technology</a>, Hamburg University of Technology (TUHH). In 2027, I will begin as a Fellow at the <a href="https://www.human-abilities.de/" target="_blank" rel="noopener noreferrer">Human Abilities Centre</a> in Berlin.
+      </p>
+      <p class="bio-line">
+        I received my PhD in Philosophy from New York University. I have a BPhil in Philosophy and a BA in Philosophy, Politics and Economics, both from Oxford.
+      </p>
+      <p class="bio-line">
+        I work in ethics, the philosophy of AI, metaphysics, and social ontology. My central question is how the inner structure of an agent – human, AI, or collective – shapes what it can do and what it can be held responsible for. I have also published work in early modern philosophy and the metaphysics of time.
+      </p>
+      <p class="bio-line">
+        At Oxford, I teach Ethics, Ethics of AI, and Philosophical Foundations of AI.
+      </p>
+      <p class="bio-line bio-contact">
+        Email: <a href="mailto:david.storrs-fox@philosophy.ox.ac.uk" target="_blank" rel="noopener noreferrer">david.storrs-fox@philosophy.ox.ac.uk</a>
+      </p>
+    </div>
+    <div class="portrait" aria-label="Portrait of David Storrs-Fox">
+      <img src="/portrait.jpg" alt="David Storrs-Fox" />
+    </div>
+  </section>
+
+  <section class="research-preview" id="research">
+    <div class="section-heading">
+      <p class="section-kicker">Current Research Projects</p>
+    </div>
+    <div class="project-list">
+      <article class="project">
+        <span class="project-number">01</span>
+        <div>
+          <h3>Fallible Abilities and Risk</h3>
+          <p>There isn’t much you are infallibly able to do – but surely you are infallibly able to take some very modest step towards action, like trying or deciding? I claim not. In my view, there are no fallibility-proof steps along the path to action, with significant implications for risk, responsibility, and the metaphysics of abilities.</p>
+        </div>
+      </article>
+      <article class="project">
+        <span class="project-number">02</span>
+        <div>
+          <h3>AI and Graded Capability</h3>
+          <p>An evaluation assesses one AI system as more capable than another – but more capable <em>how</em>? I distinguish several dimensions along which AI capabilities come in degrees, and argue that current evaluation practice routinely conflates them in ways that matter.</p>
+        </div>
+      </article>
+      <article class="project">
+        <span class="project-number">03</span>
+        <div>
+          <h3>Hybrid Human–AI Collectives</h3>
+          <p>Tomorrow’s corporations and states will be human–AI hybrids. I explore how these hybrids might differ from their human-only predecessors, and what their rise will mean for collective responsibility and the ethics of AI.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="publication-section" id="publications">
+    <div class="publication-head">
+      <p class="section-kicker">Publications</p>
+    </div>
+    <div class="publication-list">
+      <article class="publication-row">
+        <span class="publication-year">2026</span>
+        <div class="publication-main">
+          <h3>Inability, Fallibility, and the Positive Case for PAP</h3>
+          <p class="venue">Philosophical Studies 183</p>
+          <p class="publication-note">The Principle of Alternative Possibilities (PAP) says you’re morally responsible for something you have done only if you could have done otherwise. I appeal to the fallibility of human abilities to undermine a popular source of support for PAP.</p>
+        </div>
+        <div class="publication-links"><a class="file-link" target="_blank" rel="noopener noreferrer" href="/papers/storrs-fox-inability-fallibility-pap.pdf">Draft <span>↗</span></a><a target="_blank" rel="noopener noreferrer" href="https://link.springer.com/article/10.1007/s11098-025-02456-z">Published ↗</a></div>
+      </article>
+      <article class="publication-row">
+        <span class="publication-year">2025</span>
+        <div class="publication-main">
+          <h3>Graded Abilities and Action Fragility</h3>
+          <p class="venue">Erkenntnis 90</p>
+          <p class="publication-note">In my view, we’re not infallibly able to do anything. But what is an ability’s fallibility? It’s not just about the likelihood of success if you try, since not even your abilities to try are infallible. I propose an alternative account, which deploys the notion of an action’s ‘fragility’ (somewhat analogous to epistemic safety).</p>
+        </div>
+        <div class="publication-links"><a class="file-link" target="_blank" rel="noopener noreferrer" href="/papers/storrs-fox-graded-abilities-action-fragility.pdf">Draft <span>↗</span></a><a target="_blank" rel="noopener noreferrer" href="https://link.springer.com/article/10.1007/s10670-023-00760-w">Published ↗</a></div>
+      </article>
+      <article class="publication-row">
+        <span class="publication-year">2021</span>
+        <div class="publication-main">
+          <h3>Explanation and the A-theory</h3>
+          <p class="venue">Philosophical Studies 178</p>
+          <p class="publication-note">Suppose it’s raining, so you grab your umbrella. A-theorists about time think that once the rain stops, the fact that it is raining no longer obtains, but then it looks like that fact can no longer explain your action. I use this point to make trouble for the A-theory.</p>
+        </div>
+        <div class="publication-links"><a class="file-link" target="_blank" rel="noopener noreferrer" href="/papers/storrs-fox-explanation-and-the-a-theory.pdf">Draft <span>↗</span></a><a target="_blank" rel="noopener noreferrer" href="https://link.springer.com/article/10.1007/s11098-021-01646-9">Published ↗</a></div>
+      </article>
+      <article class="publication-row">
+        <span class="publication-year">2020</span>
+        <div class="publication-main">
+          <h3>Hume’s Skeptical Definitions of “Cause”</h3>
+          <p class="venue">Hume Studies 43:1 (backdated to 2017)</p>
+          <p class="publication-note">Hume wrote that his Treatise ‘tends to give us a notion of the imperfections and narrow limits of human understanding.’ I argue that this skeptical aim explains why he defines ‘cause’ twice in the Treatise, and does so again in the first Enquiry.</p>
+        </div>
+        <div class="publication-links"><a class="file-link" target="_blank" rel="noopener noreferrer" href="/papers/storrs-fox-humes-skeptical-definitions-of-cause.pdf">Draft <span>↗</span></a><a target="_blank" rel="noopener noreferrer" href="https://muse.jhu.edu/article/762165">Published ↗</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="teaching-section" id="teaching">
+    <div class="teaching-intro">
+      <p class="section-kicker">Courses I've Taught</p>
+    </div>
+    <div class="course-groups">
+      <article class="course-group">
+        <p>Oxford tutorials</p>
+        <ul><li>Ethics</li><li>Ethics of Artificial Intelligence</li><li>Alan Turing on Computability and Intelligence</li><li>Introduction to Moral Philosophy</li><li>Introduction to Logic</li></ul>
+      </article>
+      <article class="course-group">
+        <p>Oxford lectures and seminars</p>
+        <ul><li>AI and Responsibility</li><li>Ethics revision seminars</li><li>Ethics of AI revision seminars</li></ul>
+      </article>
+      <article class="course-group">
+        <p>NYU, primary instructor</p>
+        <ul><li>Advanced Seminar in Ethics and Action</li><li>Political Philosophy</li><li>Logic</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="conference-section" id="conferences">
+    <div class="conference-head">
+      <p class="section-kicker">Convening</p>
+    </div>
+    <div class="conference-list">
+      <article class="conference-row">
+        <div>
+          <h3><a href="https://www.oxford-aiethics.ox.ac.uk/event/artificial-intelligence-and-collective-agency-dorothy-crowfoot-hodgkin-building-university" target="_blank" rel="noopener noreferrer">Artificial Intelligence and Collective Agency</a></h3>
+          <p class="conference-place">University of Oxford, July 2025</p>
+          <p class="conference-note">Supported by the Mind Association and Oxford’s Institute for Ethics in AI.</p>
+        </div>
+      </article>
+      <article class="conference-row">
+        <div>
+          <h3><a href="https://www.oxford-aiethics.ox.ac.uk/climate-and-responsibility-ethical-perspectives-conference-summary" target="_blank" rel="noopener noreferrer">Climate and Responsibility: Ethical Perspectives</a></h3>
+          <p class="conference-place">Hamburg University of Technology, May 2025</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cv-section" id="cv">
+    <div class="cv-card">
+      <p class="section-kicker">Curriculum vitae</p>
+      <a class="primary-action" href="/cv/storrs-fox-cv.pdf" target="_blank" rel="noopener noreferrer">Download CV <span>↓</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-name">David Storrs-Fox</div>
+    <div class="footer-links">
+      <a href="mailto:david.storrs-fox@philosophy.ox.ac.uk" target="_blank" rel="noopener noreferrer">Email</a>
+      <a href="https://philpeople.org/profiles/david-storrs-fox" target="_blank" rel="noopener noreferrer">PhilPeople</a>
+      <a href="https://scholar.google.com/citations?user=Ev_6PxYAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</main>
+</body>
+</html>
